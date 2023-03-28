@@ -10,7 +10,7 @@ equivalente en grados Fahrenheit. La fórmula correspondiente es: F = 32 + (9 * 
 
 /**
  *
- * @author lusht
+ * @author Brennsel
  */
 public class Ej4 {
     
@@ -23,7 +23,7 @@ public class Ej4 {
         System.out.println("Ingrese los grados centigrados:");
         grados = teclado.nextFloat();
         
-        System.out.println("Su equivalente en grados Fahrenheit: " + 32+(9*grados/5) +"°F");
+        System.out.println("Su equivalente en grados Fahrenheit: " + (32+(9*grados/5)) +"°F");
     }
             
 }
