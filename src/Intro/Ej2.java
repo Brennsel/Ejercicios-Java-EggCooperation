@@ -26,5 +26,5 @@ public class Ej2 {
         System.out.println("Su nombre es: " + nombre );
     }
             
-    
+  
 }
