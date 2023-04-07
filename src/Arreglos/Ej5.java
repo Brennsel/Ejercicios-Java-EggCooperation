@@ -20,10 +20,14 @@ public class Ej5 {
         System.out.println("\nMatriz traspuesta de A:");
         mostrarTraspuesta(matrizA);
 
-        if(validarAntisimetrica(matrizA)){
+        if (validarAntisimetrica(matrizA)) {
+
             System.out.println("\nLa matriz es antisimentrica");
-        }else{
+
+        } else {
+
             System.out.println("\nLa matriz no es antisimetrica");
+
         }
     }
 
@@ -32,7 +36,9 @@ public class Ej5 {
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
+
                 matriz[i][j] = (int) (Math.random() * 20 + 10);
+
             }
         }
     }
@@ -56,8 +62,11 @@ public class Ej5 {
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
+
                 System.out.print("[" + matriz[i][j] + "]");
+
             }
+
             System.out.println(" ");
         }
     }
@@ -66,8 +75,11 @@ public class Ej5 {
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
+
                 System.out.print("[" + matriz[j][i] + "]");
+
             }
+
             System.out.println(" ");
         }
 
@@ -79,7 +91,9 @@ public class Ej5 {
             for (int j = 0; j < 3; j++) {
 
                 if (matrizA[i][j] + matrizA[j][i] != 0) {
+
                     return false;
+
                 }
 
             }

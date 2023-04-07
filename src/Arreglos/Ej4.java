@@ -21,21 +21,26 @@ public class Ej4 {
 
     }
 
-    private static void cargarMatriz(int[][] matriz){
+    private static void cargarMatriz(int[][] matriz) {
 
-        for(int i=0; i<4; i++){
-            for(int j=0; j<4; j++){
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+
                 matriz[i][j] = (int) (Math.random() * 20 + 10);
+
             }
         }
     }
 
-    private static void mostrarMatriz(int[][] matriz){
+    private static void mostrarMatriz(int[][] matriz) {
 
-        for(int i=0; i<4; i++){
-            for(int j=0; j<4; j++){
-                System.out.print("[" + matriz[i][j] +"]");
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+
+                System.out.print("[" + matriz[i][j] + "]");
+
             }
+
             System.out.println(" ");
         }
     }
@@ -44,9 +49,13 @@ public class Ej4 {
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
+
                 System.out.print("[" + matriz[j][i] + "]");
+
             }
+
             System.out.println(" ");
+
         }
 
     }
