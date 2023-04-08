@@ -9,7 +9,6 @@ import java.util.Scanner;
  es decir, están entre el 1 y el 9.
   */
 public class Ej6 {
-
     public static void main(String[] args) {
 
         int[][] matriz = new int[3][3];
@@ -105,4 +104,5 @@ public class Ej6 {
 
         }
     }
+
 }
