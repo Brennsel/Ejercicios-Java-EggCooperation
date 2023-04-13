@@ -1,13 +1,13 @@
 package Arreglos;
 
 import java.util.Scanner;
-
 /*
  Un cuadrado mágico 3 x 3 es una matriz 3 x 3 formada por números del 1 al 9 donde la suma de sus filas,
  sus columnas y sus diagonales son idénticas. Crear un programa que permita introducir un cuadrado por teclado
  y determine si este cuadrado es mágico o no. El programa deberá comprobar que los números introducidos son correctos,
  es decir, están entre el 1 y el 9.
-  */
+ */
+
 public class Ej6 {
     public static void main(String[] args) {
 
@@ -45,6 +45,10 @@ public class Ej6 {
 
                     matriz[i][j] = leer.nextInt();
 
+                    if (matriz[i][j] < 1 || matriz[i][j] > 9) {
+                        System.out.println("Valor incorrecto.");
+                    }
+
                 } while (matriz[i][j] < 1 || matriz[i][j] > 9);
             }
         }
@@ -69,40 +73,37 @@ public class Ej6 {
 
     private static boolean validarMagica(int[][] matriz) {
 
-        int diagonal = 0, fila = 0, columna = 0;
+        int diagonal = 0, contradiagonal = 0, fila, columna, k = 2;
 
         for (int i = 0; i < 3; i++) {
+
+            diagonal += matriz[i][i];
+
+        }
+
+        for (int i = 0; i < 3; i++) {
+
+            contradiagonal += matriz[i][k];
+            k--;
+        }
+
+        for (int i = 0; i < 3; i++) {
+
+            fila = 0;
+            columna = 0;
+
             for (int j = 0; j < 3; j++) {
 
-                if (i == j) {
+                fila += matriz[i][j];
+                columna += matriz[j][i];
 
-                    diagonal += matriz[i][j];
+            }
 
-                }
-
-                if (i == 0) {
-
-                    fila += matriz[i][j];
-
-                }
-
-                if (j == 0) {
-
-                    columna += matriz[i][j];
-
-                }
+            if (fila != columna || fila != diagonal || diagonal != contradiagonal) {
+                return false;
             }
         }
 
-        if (diagonal == fila && diagonal == columna) {
-
-            return true;
-
-        } else {
-
-            return false;
-
-        }
+        return true;
     }
-
 }
